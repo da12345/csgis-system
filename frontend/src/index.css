@@ -1,0 +1,12 @@
+.container {
+  max-width: 450px;
+  margin: auto;
+  padding: 0px;
+  text-align: center;
+}
+
+button:focus,
+button:active {
+  outline: none;
+  box-shadow: none;
+}

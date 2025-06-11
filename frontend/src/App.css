@@ -1,0 +1,91 @@
+body, html {
+  background-color: white !important;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+p {
+  font-size: calc(4.5px + 1.2vh + 0.30vw);
+  line-height: 1.5;
+}
+
+.likert-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.likert-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.likert-option img {
+  width: 10px;
+  height: 10px;
+  display: block;
+  margin-bottom: 5px;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+.likert-text {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+  display: block;
+  line-height: 1.2;
+}
+
+.likert-option,
+.likert-option * {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+button,
+button:focus,
+button:active,
+button:focus-visible,
+button::-moz-focus-inner {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+button, 
+button * {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.introSection {
+  flex: 0 1 auto;
+  margin: 5px;
+  margin-top: 0;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.mapSection {
+  flex: 1 1 auto;
+  min-height: 0;
+  position: relative;
+  height: calc(var(--vh) * 100);
+}

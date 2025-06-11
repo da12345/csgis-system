@@ -1,0 +1,155 @@
+
+.introSection {
+  flex: 0 1 auto;
+  margin: 16px;
+}
+
+.mapSection {
+  flex: 1 1 0; 
+  position: relative;
+  min-height: 0;
+  height: calc(var(--vh) * 100);
+}
+  
+.contentWrapper {
+  overflow-y: auto !important;
+  max-height: 100vh;
+  padding-bottom: 100px;
+}
+
+@media (min-height: 900px) {
+  .contentWrapper {
+    overflow-y: hidden !important;
+  }
+}
+
+.mapFullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+.formContainer {
+  max-height: calc(100vh - 5);
+  overflow-y: auto;
+}
+
+.mapSubmitted {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80vh;
+  z-index: 998;
+  flex: 1 1 auto;
+  height: calc(var(--vh) * 50);
+}
+
+.mapPinned {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 18vh;
+  z-index: 1000;
+  touch-action: none !important;
+  pointer-events: auto !important;
+}
+
+.esri-view,
+.esri-view-root,
+.esri-view-surface {
+  height: 100% !important;
+  max-height: inherit !important;
+  touch-action: auto !important;
+  pointer-events: auto !important;
+}
+
+@media (min-height: 741px) and (max-height: 850px) {
+  .mapPinned {
+    height: clamp(160px, 25vh, 160px) !important;
+    touch-action: none;
+  }
+}
+
+@media (min-height: 851px) and (max-height: 1023px) {
+  .mapPinned {
+    height: clamp(190px, 26vh, 190px) !important;
+    touch-action: none;
+  }
+}
+
+@media (min-height: 1024px) {
+  .mapPinned {
+    height: clamp(120px, 27vh, 600px) !important;
+    touch-action: none;
+  }
+}
+
+.esri-view {
+    height: 100% !important;
+    max-height: inherit !important;
+}
+
+.esri-view-root,
+.esri-view-surface {
+    height: 100% !important;
+    max-height: inherit !important;
+}
+  
+.submittedContainer {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+  
+.thanksContainer {
+  flex: 0 0 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  padding: 20px;
+}
+
+.mapFullscreenContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: white;
+}
+  
+.mapFullscreen,
+.mapPinned {
+  touch-action: pinch-zoom !important;
+  pointer-events: auto !important;
+}
+body, html {
+  touch-action: none !important;
+  user-select: none !important;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.mapFullscreen,
+.mapPinned,
+.esri-view,
+.esri-view-root,
+.esri-view-surface {
+  touch-action: pinch-zoom !important;
+  pointer-events: auto !important;
+}
+
+.esri-view,
+.esri-view-root,
+.esri-view-surface {
+  height: 100% !important;
+  max-height: inherit !important;
+  touch-action: auto !important;
+}
